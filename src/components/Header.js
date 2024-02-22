@@ -60,6 +60,8 @@ const Header = () => {
       <Socials />
 
       <a
+        onMouseEnter={mouseEnterHandler}
+        onMouseLeave={mouseLeaveHandler}
         href={CV}
         download="CV-FOLTZER_THOMAS"
         target="_blank"

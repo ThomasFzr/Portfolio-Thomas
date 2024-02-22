@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 
-import CarImg from "../img/about/car.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

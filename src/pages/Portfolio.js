@@ -1,10 +1,5 @@
 import React, { useContext } from "react";
 
-import Monkey from "../img/portfolio/monkey.png";
-import Bird from "../img/portfolio/bird.png";
-import Eagle from "../img/portfolio/eagle.png";
-import Dog from "../img/portfolio/dog.png";
-
 import Spiral from "../img/portfolio/spiral.png";
 import Stars from "../img/portfolio/stars.png";
 
@@ -92,7 +87,7 @@ const Portfolio = () => {
 
       <div class="container pb-8">
         <h1 className="h1 mb-10">Mes projets</h1>
-        <div class="gallery">
+        {/* <div class="gallery">
           <figure class="gallery__item gallery__item--1">
             <img src={Bird} alt="Gallery image 1" class="gallery__img" />
           </figure>
@@ -111,7 +106,7 @@ const Portfolio = () => {
           <figure class="gallery__item gallery__item--6">
             <img src={Monkey} alt="Gallery image 6" class="gallery__img" />
           </figure>
-        </div>
+        </div> */}
       </div>
     </motion.section>
   );

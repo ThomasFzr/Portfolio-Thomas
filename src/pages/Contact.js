@@ -1,12 +1,30 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 
 import ButterflyImg from "../img/contact/butterfly2.png";
 import { motion } from "framer-motion";
 
 import { transition1 } from "../transitions";
 import { CursorContext } from "../context/CursorContext";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_yu78179", "template_o39n23h", form.current, {
+        publicKey: "ZbTzF-4P346zgQtCi",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   useEffect(() => {
@@ -27,7 +45,7 @@ const Contact = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
+
   return (
     <motion.section
       initial={{ opacity: 0, y: "100%" }}
@@ -57,13 +75,18 @@ const Contact = () => {
           >
             <h1 className="h1">Me contacter</h1>
             <p className="mb-12">Si vous voulez travailler avec moi.</p>
-            <form className="flex flex-col gap-y-4">
+            <form
+              className="flex flex-col gap-y-4"
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <div className="flex gap-x-10">
                 <input
                   className="outline-none border-b
               border-b-primary h-[60px] bg-transparent
               font-secondary w-full pl-3 placeholder:text-[#757879]"
                   type="text"
+                  name="from_name"
                   placeholder="Votre nom"
                 ></input>
                 <input
@@ -71,6 +94,7 @@ const Contact = () => {
               border-b-primary h-[60px] bg-transparent
               font-secondary w-full pl-3 placeholder:text-[#757879]"
                   type="email"
+                  name="from_mail"
                   placeholder="Votre adresse mail"
                 ></input>
               </div>
@@ -79,9 +103,12 @@ const Contact = () => {
               border-b-primary h-[60px] bg-transparent
               font-secondary w-full pl-3 placeholder:text-[#757879]"
                 type="text"
+                name="message"
                 placeholder="Votre message"
               ></input>
               <button
+                value="Send"
+                type="submit"
                 className="btn mb-[30px] mx-auto
                 lg:mx-0 self-start"
               >
@@ -103,7 +130,6 @@ const Contact = () => {
         </div>
       </div>
     </motion.section>
-    
   );
 };
 
