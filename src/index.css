@@ -19,11 +19,17 @@
 
 body {
   overflow-x: hidden; 
+  font-family: 'Aclonica', sans-serif;
 }
+
+
 
 *{
   -ms-overflow-style: none;
+  font-family: 'Aclonica', sans-serif;
 }
 ::-webkit-scrollbar {
   display: none;
 }
+
+

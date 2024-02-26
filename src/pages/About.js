@@ -63,7 +63,7 @@ const About = () => {
               <br />
               <br />
               J'adore le développement web, que ce soit le front ou le back. <br/>
-              Je suis également passioné de mode et de musique.
+              Je suis également passioné de sport et de musique.
             </p>
             <Link to={"/portfolio"} className="btn">
               Voir mon travail
