@@ -21,15 +21,17 @@ const Portfolio = () => {
       ".header .letters:last-child"
     );
 
+    gsap.set(projectsHolder, { opacity: 0 });
+
     ScrollTrigger.create({
       trigger: projectsHolder,
       start: "-0.1% top",
       end: "bottom bottom",
       onEnter: () => {
-        gsap.set(projectsHolder, { position: "absolute", top: "195%" });
+        gsap.set(projectsHolder, { opacity: 1, ease: "power2.inOut", position: "absolute", top: "195%" });
       },
       onLeaveBack: () => {
-        gsap.set(projectsHolder, { position: "fixed", top: "0" });
+        gsap.set(projectsHolder, { opacity: 0, ease: "power2.inOut", position: "fixed", top: "0" });
       },
     });
 

@@ -23,6 +23,8 @@
 }
 
 .projects-holder {
+  opacity: 0;
+  transition: opacity 0.5s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
