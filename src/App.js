@@ -8,13 +8,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { CursorContext } from "./context/CursorContext";
-import ParticleBackground from "./ParticleBackground";
 
 function App() {
   const { cursorVariants, cursorBG } = useContext(CursorContext);
   return (
     <div className="App">
-      <ParticleBackground />
       <Router>
         <ScrollToTop />
         <Header />
