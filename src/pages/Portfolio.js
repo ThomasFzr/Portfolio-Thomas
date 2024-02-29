@@ -1,6 +1,10 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { motion } from "framer-motion";
+import { transition1 } from "../transitions";
+import { CursorContext } from "../context/CursorContext";
+import { Link } from "react-router-dom";
 
 import HomePhp from "../img/portfolio/homePHP.png";
 import Wpf from "../img/portfolio/wpf.png";
@@ -11,9 +15,11 @@ import "./portfolio.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   useEffect(() => {
     const contentHolder = document.querySelector(".header");
     const projectsHolder = document.querySelector(".projects-holder");
+    const project = document.querySelector(".project");
     const headerLettersFirst = document.querySelector(
       ".header .letters:first-child"
     );
@@ -22,16 +28,27 @@ const Portfolio = () => {
     );
 
     gsap.set(projectsHolder, { opacity: 0 });
+    // gsap.set(project, { opacity: 0, y: 20 });
 
     ScrollTrigger.create({
       trigger: projectsHolder,
       start: "-0.1% top",
       end: "bottom bottom",
       onEnter: () => {
-        gsap.set(projectsHolder, { opacity: 1, ease: "power2.inOut", position: "absolute", top: "195%" });
+        gsap.set(projectsHolder, {
+          opacity: 1,
+          ease: "power2.inOut",
+          position: "absolute",
+          top: "195%",
+        });
       },
       onLeaveBack: () => {
-        gsap.set(projectsHolder, { opacity: 0, ease: "power2.inOut", position: "fixed", top: "0" });
+        gsap.set(projectsHolder, {
+          opacity: 0,
+          ease: "power2.inOut",
+          position: "fixed",
+          top: "0",
+        });
       },
     });
 
@@ -66,6 +83,31 @@ const Portfolio = () => {
       document.body.style.height = `${totalHeight}px`;
     }
 
+    gsap.utils.toArray(project).forEach((project, index) => {
+      ScrollTrigger.create({
+        trigger: project,
+        start: "top top", // Adjust the start position based on your design
+        end: "center center",
+        onEnter: () => {
+          gsap.to(project, {
+            opacity: 1,
+            y: 0,
+            ease: "power2.inOut",
+            duration: 0.5,
+            delay: index * 0.2,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(project, {
+            opacity: 0,
+            y: 20,
+            ease: "power2.inOut",
+            duration: 0.5,
+          });
+        },
+      });
+    });
+
     ScrollTrigger.create({
       trigger: ".header",
       start: "top top",
@@ -80,7 +122,15 @@ const Portfolio = () => {
   }, []);
   return (
     <>
-      <div className="header">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={transition1}
+        onMouseEnter={mouseEnterHandler}
+        onMouseLeave={mouseLeaveHandler}
+        className="header"
+      >
         <div className="letters">
           <div>p</div>
           <div>r</div>
@@ -92,82 +142,75 @@ const Portfolio = () => {
           <div>t</div>
           <div>s</div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="projects-holder">
-        <div className="project">
-          <div className="img-holder">
-            <img className="img" src={HomePhp} alt=""></img>
-          </div>
-          <div className="text-desc-holder">
-            <div className="text-holder">
-              Dans le cadre du module PHP, nous avons dû créer un site internet
-              pour une agence de location (Troc Mon Toit) qui a pour objectif de
-              digitaliser ses services et de mettre à disposition divers biens
-              pour générer des revenus. Cette application doit afficher tous les
+      <div
+        onMouseEnter={mouseEnterHandler}
+        onMouseLeave={mouseLeaveHandler}
+        className="projects-holder"
+      >
+        <h1 className="h1">Mes projets</h1>
+
+        <Link to={"/portfolio/TrocMonToit"} className="pl-16">
+          <div className="project">
+            <div className="img-holder">
+              <img className="img" src={HomePhp} alt=""></img>
+            </div>
+            <div className="text-desc-holder">
+              <div className="text-holder">
+                Dans le cadre du module PHP, nous avons dû créer un site
+                internet pour une agence de location (Troc Mon Toit) qui a pour
+                objectif de digitaliser ses services et de mettre à disposition
+                divers biens pour générer des revenus.
+                {/* Cette application doit afficher tous les
               logements disponibles, chacun représenté par une photo, et doit
               pouvoir être recherchée par ville. De plus, l'affichage doit
               permettre de filtrer les hébergements par prix par nuit, type
-              d'hébergement, commodités disponibles et services.
-              <div className="desc-holder">
-                <div className="techno">Techno: PHP, MySQL, HTML, CSS</div>
-                <div className="git-link">
-                  Lien Git:{" "}
-                  <a href="https://github.com/B2-Info-23-24/php-ThomasFzr">
-                    GitHub
-                  </a>
+              d'hébergement, commodités disponibles et services. */}
+                <div className="desc-holder">
+                  <div className="techno">Techno: PHP, MySQL, HTML, CSS</div>
+                  <div className="git-link">Durée : 1 mois</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Link>
 
-        <div className="project">
-          <div className="img-holder">
-            <img className="img" src={Wpf} alt=""></img>
-          </div>
-          <div className="text-desc-holder">
-            <div className="text-holder">
-              Dans le cadre du module C# de notre école, nous avons dû
-              développer un Application WPF en équipe de deux. Notre projet est
-              une vidéo au tour par tour jeu contre une IA inspirée de l'anime
-              Chainsaw Man.
-              <div className="desc-holder">
-                <div className="techno">Techno: C#, WPF</div>
-                <div className="git-link">
-                  Lien Git:{" "}
-                  <a href="https://github.com/ThomasFzr/GameWPF">GitHub</a>
+        <Link to={"/portfolio/Wpf"} className="pl-16">
+          <div className="project">
+            <div className="img-holder">
+              <img className="img" src={Wpf} alt=""></img>
+            </div>
+            <div className="text-desc-holder">
+              <div className="text-holder">
+                Dans le cadre du module C# de notre école, nous avons dû
+                développer une Application WPF en équipe de deux.{" "}
+                <div className="desc-holder">
+                  <div className="techno">Techno: C#, WPF</div>
+                  <div className="git-link">Durée : 2 semaines</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Link>
 
-        <div className="project">
-          <div className="img-holder">
-            <img className="img" src={Python} alt=""></img>
-          </div>
-          <div className="text-desc-holder">
-            <div className="text-holder">
-              Dans le cadre du module Python, nous avons dû créer un projet
-              inspiré de le jeu Agario. Vous incarnez un personnage dont le but
-              est de consommer nourriture (petites boules jaunes). Consommer ces
-              balles augmente votre taille, vitesse et score. Attention aux
-              pièges (boules rouges) ; si ton la taille est supérieure à la
-              leur, votre taille et votre vitesse seront divisées au contact de
-              ces pièges.
-              <div className="desc-holder">
-                <div className="techno">Techno: Python</div>
-                <div className="git-link">
-                  Lien Git:{" "}
-                  <a href="https://github.com/B2-Info-23-24/agarpyo-b2-a-ThomasFzr">
-                    GitHub
-                  </a>
+        <Link to={"/portfolio/Agarpyo"} className="pl-16">
+          <div className="project">
+            <div className="img-holder">
+              <img className="img" src={Python} alt=""></img>
+            </div>
+            <div className="text-desc-holder">
+              <div className="text-holder">
+                Dans le cadre du module Python, nous avons dû créer un projet
+                inspiré du jeu Agario.
+                <div className="desc-holder">
+                  <div className="techno">Techno: Python, Pygame</div>
+                  <div className="git-link">Durée : 6 jours</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 #skills {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 25vw;
   max-width: 65rem;
   display: flex;
@@ -21,7 +21,7 @@
   margin: 1rem;
   padding: 1.5rem 2rem;
   border-radius: 50px;
-  background: #ffffff;
+  background: rgb(255, 255, 255);
   box-shadow: 6px 6px 12px #f0f0f0, -6px -6px 12px #ffffff;
 }
 
@@ -37,7 +37,7 @@
   font-weight: 200;
 }
 
-@media screen and (max-width: 720px) {
+/* @media screen and (max-width: 720px) {
   .skillBarText > p {
     font-size: 2vw;
   }
@@ -54,4 +54,4 @@
   .skillBarText > h2 {
     font-style: 5vw;
   }
-}
+} */

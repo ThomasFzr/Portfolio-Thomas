@@ -40,7 +40,7 @@
   margin-bottom: 2vh;
   border-radius: 43px;
   background: #ffffff;
-  box-shadow: 6px 6px 12px #e4e4e4, -6px -6px 12px #fcfcfc;
+  box-shadow: 6px 6px 12px #e4e4e4, -6px -6px 12px #fcfcfc; 
 }
 
 .project:first-child {
@@ -85,5 +85,11 @@
   color:blue;
   z-index: 999; 
 }
+
+/* .project {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+} */
 
 

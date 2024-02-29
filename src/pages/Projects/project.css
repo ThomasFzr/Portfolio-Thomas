@@ -1,0 +1,47 @@
+.project-details {
+  /* background: blue; */
+  padding-top: 20vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  width: 60%;
+  margin-bottom: 4vh;
+}
+
+.image {
+  /* background: red; */
+  justify-content: space-between;
+  display: flex;
+  margin: 4vh;
+}
+
+.image img {
+  width: 40%;
+}
+
+.image a {
+  display: flex;
+ justify-content: center;
+ width: 20%;
+ height: 20%;
+}
+
+.image .arrow:hover {
+  scale:110%;
+}
+
+.little {
+  color: grey;
+}
+.little a {
+  text-decoration: underline;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+}
