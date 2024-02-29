@@ -36,7 +36,7 @@ const Wpf = () => {
               <div className="little">
                 <a href="">Github</a>
               </div>
-              <div className="little">Durée: 1 mois</div>
+              <div className="little">Durée: 2 semaines</div>
             </div>
           </div>
           <div className="image">
