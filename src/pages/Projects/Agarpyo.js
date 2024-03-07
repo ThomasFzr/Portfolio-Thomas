@@ -34,7 +34,7 @@ const Agarpyo = () => {
             <div className="info">
               <div className="little">Techno: Python, Pygame</div>
               <div className="little">
-                <a href="">Github</a>
+                <a href="https://github.com/B2-Info-23-24/agarpyo-b2-a-ThomasFzr">Github</a>
               </div>
               <div className="little">Durée: 6 jours</div>
             </div>

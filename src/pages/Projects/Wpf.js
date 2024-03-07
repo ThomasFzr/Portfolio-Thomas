@@ -34,7 +34,7 @@ const Wpf = () => {
             <div className="info">
               <div className="little">Techno: C#, WPF</div>
               <div className="little">
-                <a href="">Github</a>
+                <a href="https://github.com/ThomasFzr/GameWPF">Github</a>
               </div>
               <div className="little">Durée: 2 semaines</div>
             </div>

@@ -34,7 +34,7 @@ const TrocMonToit = () => {
             <div className="info">
               <div className="little">Techno: PHP, MySQL, HTML, CSS</div>
               <div className="little">
-                <a href="">Github</a>
+                <a href="https://github.com/B2-Info-23-24/php-ThomasFzr">Github</a>
               </div>
               <div className="little">Durée: 1 mois</div>
             </div>
