@@ -70,7 +70,6 @@ const About = () => {
             </Link>
           </motion.div>
           <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none ">
-            {/* <img src={CarImg} alt=""></img> */}
             <Skills />
           </div>
         </div>

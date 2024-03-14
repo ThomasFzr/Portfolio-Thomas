@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { transition1 } from "../../transitions";

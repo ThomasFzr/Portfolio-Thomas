@@ -144,73 +144,73 @@ const Portfolio = () => {
         </div>
       </motion.div>
 
-      <div
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
-        className="projects-holder"
-      >
-        <h1 className="h1">Mes projets</h1>
 
-        <Link to={"/portfolio/TrocMonToit"} className="pl-16">
-          <div className="project">
-            <div className="img-holder">
-              <img className="img" src={HomePhp} alt=""></img>
-            </div>
-            <div className="text-desc-holder">
-              <div className="text-holder">
-                Dans le cadre du module PHP, nous avons dû créer un site
-                internet pour une agence de location (Troc Mon Toit) qui a pour
-                objectif de digitaliser ses services et de mettre à disposition
-                divers biens pour générer des revenus.
-                {/* Cette application doit afficher tous les
-              logements disponibles, chacun représenté par une photo, et doit
-              pouvoir être recherchée par ville. De plus, l'affichage doit
-              permettre de filtrer les hébergements par prix par nuit, type
-              d'hébergement, commodités disponibles et services. */}
-                <div className="desc-holder">
-                  <div className="techno">Techno: PHP, MySQL, HTML, CSS</div>
-                  <div className="git-link">Durée : 1 mois</div>
+      <div className="all-projects">
+        <div
+          onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaveHandler}
+          className="projects-holder"
+        >
+          <h1 className="h1">Mes projets</h1>
+
+          <Link to={"/portfolio/TrocMonToit"}>
+            <div className="project">
+              <div className="img-holder">
+                <img className="img" src={HomePhp} alt=""></img>
+              </div>
+              <div className="text-desc-holder">
+                <div className="text-holder">
+                  Dans le cadre du module PHP, nous avons dû créer un site
+                  internet pour une agence de location (Troc Mon Toit) qui a pour
+                  objectif de digitaliser ses services et de mettre à disposition
+                  divers biens pour générer des revenus.
+                  <div className="desc-holder">
+                    <div className="techno">Techno: PHP, MySQL, HTML, CSS</div>
+                    <div className="git-link">Durée : 1 mois</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
 
-        <Link to={"/portfolio/Wpf"} className="pl-16">
-          <div className="project">
-            <div className="img-holder">
-              <img className="img" src={Wpf} alt=""></img>
-            </div>
-            <div className="text-desc-holder">
-              <div className="text-holder">
-                Dans le cadre du module C# de notre école, nous avons dû
-                développer une Application WPF en équipe de deux.{" "}
-                <div className="desc-holder">
-                  <div className="techno">Techno: C#, WPF</div>
-                  <div className="git-link">Durée : 2 semaines</div>
+          <Link to={"/portfolio/Wpf"}>
+            <div className="project">
+              <div className="img-holder">
+                <img className="img" src={Wpf} alt=""></img>
+              </div>
+              <div className="text-desc-holder">
+                <div className="text-holder">
+                  Dans le cadre du module C# de notre école, nous avons dû
+                  développer une Application WPF en équipe de deux.{" "}
+                  <div className="desc-holder">
+                    <div className="techno">Techno: C#, WPF</div>
+                    <div className="git-link">Durée : 2 semaines</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
 
-        <Link to={"/portfolio/Agarpyo"} className="pl-16">
-          <div className="project">
-            <div className="img-holder">
-              <img className="img" src={Python} alt=""></img>
-            </div>
-            <div className="text-desc-holder">
-              <div className="text-holder">
-                Dans le cadre du module Python, nous avons dû créer un projet
-                inspiré du jeu Agario.
-                <div className="desc-holder">
-                  <div className="techno">Techno: Python, Pygame</div>
-                  <div className="git-link">Durée : 6 jours</div>
+          <Link to={"/portfolio/Agarpyo"}>
+            <div className="project">
+              <div className="img-holder">
+                <img className="img" src={Python} alt=""></img>
+              </div>
+              <div className="text-desc-holder">
+                <div className="text-holder">
+                  Dans le cadre du module Python, nous avons dû créer un projet
+                  inspiré du jeu Agario.
+                  <div className="desc-holder">
+                    <div className="techno">Techno: Python, Pygame</div>
+                    <div className="git-link">Durée : 6 jours</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+
+
+        </div>
       </div>
     </>
   );

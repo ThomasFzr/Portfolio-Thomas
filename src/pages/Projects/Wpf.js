@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { transition1 } from "../../transitions";
@@ -30,7 +29,7 @@ const Wpf = () => {
           className="project-details"
         >
           <div className="title">
-            <h1 className="h1">Application WPF</h1>
+            <h1 className="h1">App WPF</h1>
             <div className="info">
               <div className="little">Techno: C#, WPF</div>
               <div className="little">
