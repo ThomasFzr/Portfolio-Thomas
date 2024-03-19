@@ -62,16 +62,17 @@ const About = () => {
               Je suis en 2e année d'école d'informatique.
               <br />
               <br />
-              J'adore le développement web, que ce soit le front ou le back. <br/>
+              Je suis passionné par la création, le développement web me permet donc de m'exprimer 
+              et laisser libre court à mon imagination. <br/>
               Je suis également passioné de sport et de musique.
             </p>
             <Link to={"/portfolio"} className="btn">
               Voir mon travail
             </Link>
           </motion.div>
-          <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none ">
+          {/* <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none ">
             <Skills />
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.section>
