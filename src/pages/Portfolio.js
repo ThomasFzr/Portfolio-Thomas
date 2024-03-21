@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import HomePhp from "../img/portfolio/homePHP.png";
 import Wpf from "../img/portfolio/wpf.png";
 import Python from "../img/portfolio/python.png";
+import freebet from "../img/portfolio/freebet.png";
 
 import "./portfolio.css";
 
@@ -152,6 +153,24 @@ const Portfolio = () => {
           className="projects-holder"
         >
           <h1 className="h1">Mes projets</h1>
+
+          <Link to={"/portfolio/Freebet"}>
+            <div className="project">
+              <div className="img-holder">
+                <img className="img" src={freebet} alt=""></img>
+              </div>
+              <div className="text-desc-holder">
+                <div className="text-holder">
+                  Dans le cadre d'un projet de développement de notre école, nous avons réaliser un site de paris en ligne
+                  sans argent.
+                  <div className="desc-holder">
+                    <div className="techno">Techno: PHP, MySQL, JS, HTML, CSS</div>
+                    <div className="git-link">Durée: 6 mois</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
 
           <Link to={"/portfolio/TrocMonToit"}>
             <div className="project">

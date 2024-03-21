@@ -39,7 +39,7 @@ const TrocMonToit = () => {
             </div>
           </div>
           <div className="image">
-            <a href="/portfolio/Wpf">
+            <a href="/portfolio/Freebet">
               <img className="arrow" src={ArrowLeft} alt=""></img>
             </a>
             <img src={HomePhp} alt=""></img>
@@ -58,10 +58,6 @@ const TrocMonToit = () => {
             d'hébergement, commodités disponibles et services.
           </p>
         </motion.div>
-      </div>
-
-      <div class="container">
-        <div class="child"></div>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ const Wpf = () => {
               <img className="arrow" src={ArrowLeft} alt=""></img>
             </a>
             <img src={WpfImg} alt=""></img>
-            <a href="/portfolio/TrocMonToit">
+            <a href="/portfolio/Freebet">
               <img className="arrow" src={ArrowRight} alt=""></img>
             </a>
           </div>
@@ -53,10 +53,6 @@ const Wpf = () => {
             tour par tour jeu contre une IA inspirée de l'anime Chainsaw Man.
           </p>
         </motion.div>
-      </div>
-
-      <div class="container">
-        <div class="child"></div>
       </div>
     </div>
   );

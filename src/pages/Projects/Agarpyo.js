@@ -57,10 +57,6 @@ const Agarpyo = () => {
           </p>
         </motion.div>
       </div>
-
-      <div class="container">
-        <div class="child"></div>
-      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 .project-details {
   /* background: blue; */
   padding-top: 20vh;
+  width: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -11,43 +12,58 @@
 .title {
   width: 60%;
   margin-bottom: 4vh;
+  /* background-color: yellow; */
 }
 
 .image {
   /* background: red; */
   justify-content: space-between;
+  align-items: center;
   display: flex;
-  margin: 4vh;
+  margin: 4vh 0;
 }
 
 .image img {
-  width: 40%;
+  width: 50%;
 }
 
 .image a {
   display: flex;
- justify-content: center;
- width: 20%;
- height: 20%;
+  justify-content: center;
+  width: 20%;
+  height: 20%;
 }
 
 .image .arrow:hover {
-  scale:110%;
+  scale: 120%;
 }
 
 .little {
   color: grey;
 }
+
 .little a {
   text-decoration: underline;
 }
+
 .info {
   display: flex;
   justify-content: space-between;
 }
 
+.first-row {
+  padding: 4vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.first-row img {
+  width: 50%;
+}
+
 @media (max-width: 800px) {
-  .desc{
+  .desc {
     width: 80%;
   }
 }
