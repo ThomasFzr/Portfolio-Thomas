@@ -83,6 +83,12 @@
   /* background-color: blue; */
 }
 
+.text-holder h1{
+  font-size: 25px;
+  font-weight: 200;
+  text-decoration: underline;
+}
+
 .desc-holder {
   padding-top: 2vh;
   display: flex;

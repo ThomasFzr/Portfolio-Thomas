@@ -161,6 +161,7 @@ const Portfolio = () => {
               </div>
               <div className="text-desc-holder">
                 <div className="text-holder">
+                  <h1>FREEBET</h1><br></br>
                   Dans le cadre d'un projet de développement de notre école, nous avons réaliser un site de paris en ligne
                   sans argent.
                   <div className="desc-holder">
@@ -179,6 +180,7 @@ const Portfolio = () => {
               </div>
               <div className="text-desc-holder">
                 <div className="text-holder">
+                  <h1>Troc Mon Toit</h1><br></br>
                   Dans le cadre du module PHP, nous avons dû créer un site
                   internet pour une agence de location (Troc Mon Toit) qui a pour
                   objectif de digitaliser ses services et de mettre à disposition
@@ -199,6 +201,7 @@ const Portfolio = () => {
               </div>
               <div className="text-desc-holder">
                 <div className="text-holder">
+                  <h1>Agarpyo</h1><br></br>
                   Dans le cadre du module C# de notre école, nous avons dû
                   développer une Application WPF en équipe de deux.{" "}
                   <div className="desc-holder">
@@ -217,6 +220,7 @@ const Portfolio = () => {
               </div>
               <div className="text-desc-holder">
                 <div className="text-holder">
+                  <h1>App WPF</h1><br></br>
                   Dans le cadre du module Python, nous avons dû créer un projet
                   inspiré du jeu Agario.
                   <div className="desc-holder">
