@@ -8,6 +8,7 @@ import { CursorContext } from "../../context/CursorContext";
 import WpfImg from "../../img/portfolio/wpf.png";
 import ArrowLeft from "../../img/portfolio/arrowLeft.png";
 import ArrowRight from "../../img/portfolio/arrowRight.png";
+import video from "../../img/portfolio/videoWpf.mp4";
 
 import "./project.css";
 
@@ -52,6 +53,14 @@ const Wpf = () => {
             une Application WPF en équipe de deux. Notre projet est un jeu vidéo
             tour par tour jeu contre une IA inspirée de l'anime Chainsaw Man.
           </p>
+
+          <div className="first-row">
+            <video controls width="600" height="400">
+              <source src={video} type="video/mp4" />
+              {/* You can add additional <source> tags for different video formats */}
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </motion.div>
       </div>
     </div>

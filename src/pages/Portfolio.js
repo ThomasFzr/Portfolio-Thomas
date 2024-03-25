@@ -201,7 +201,7 @@ const Portfolio = () => {
               </div>
               <div className="text-desc-holder">
                 <div className="text-holder">
-                  <h1>Agarpyo</h1><br></br>
+                  <h1>App WPF</h1><br></br>
                   Dans le cadre du module C# de notre école, nous avons dû
                   développer une Application WPF en équipe de deux.{" "}
                   <div className="desc-holder">
@@ -220,7 +220,7 @@ const Portfolio = () => {
               </div>
               <div className="text-desc-holder">
                 <div className="text-holder">
-                  <h1>App WPF</h1><br></br>
+                  <h1>Agarpyo</h1><br></br>
                   Dans le cadre du module Python, nous avons dû créer un projet
                   inspiré du jeu Agario.
                   <div className="desc-holder">
