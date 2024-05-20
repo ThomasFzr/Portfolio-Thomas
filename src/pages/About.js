@@ -64,7 +64,7 @@ const About = () => {
               <br />
               Je suis passionné par la création, le développement web me permet donc de m'exprimer 
               et laisser libre court à mon imagination. <br/>
-              Je suis également passioné de sport et de musique.
+              Je suis également passionné de sport et de musique.
             </p>
             <Link to={"/portfolio"} className="btn">
               Voir mon travail
